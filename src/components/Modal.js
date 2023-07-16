@@ -5,6 +5,13 @@ function Modal({ show, onClose, children }) {
     return null;
   }
 
+  
+//   if(show){
+//       body.addEventListener((event), ()=>{
+//         onClose();
+//       });
+//   }
+
   const handleClose = () => {
     onClose();
   };
@@ -15,7 +22,9 @@ function Modal({ show, onClose, children }) {
         <button className="modal-close" onClick={handleClose}>
           Close
         </button>
-        {children}
+        <div className='Modal'>
+            {children}
+        </div>
       </div>
     </div>
   );
